@@ -1,0 +1,62 @@
+<style>
+@media(min-width: 769px){
+  .product--thumbnail_slider .product__media-gallery {
+    display: flex !important;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+slider-component {
+    width: 100%;
+}
+
+.thumbnail-slider .thumbnail-list.slider--tablet-up {
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    width: 100%;
+    height: max-content;
+    overflow-y: auto;
+    overflow-x: hidden;
+    grid-template-rows: repeat(2,1fr);
+    max-height: 400px;
+}
+
+.product--small .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
+    width: 100% !important;
+}
+
+.product--thumbnail_slider .thumbnail-slider {
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+  .mrk-gallery {
+    width: 100%;
+}
+
+.product--thumbnail_slider .slider-mobile-gutter .slider-button {
+    margin: auto;
+    transform: rotate(90deg);
+}
+  .product--small .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
+    width: auto !important;
+    height: calc(33% - 0.8rem);
+}
+}
+
+</style>
+<script>
+  document.querySelector('[name="mrk_next"]').addEventListener('click',function(){
+      var top_pos = document.querySelector('.thumbnail-list').scrollTop;
+      if(top_pos<300){
+          document.querySelector('.thumbnail-list').scrollTop = top_pos + 100;
+      }
+  });
+  document.querySelector('[name="mrk_previous"]').addEventListener('click',function(){
+      var top_pos = document.querySelector('.thumbnail-list').scrollTop;
+      if(top_pos>100){
+          document.querySelector('.thumbnail-list').scrollTop = top_pos - 100;
+      }
+  });
+</script>

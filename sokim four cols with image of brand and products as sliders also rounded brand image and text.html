@@ -1,0 +1,210 @@
+
+  <style>
+  .fx_recursive_container {
+  display: flex;
+  flex-wrap: wrap;
+    max-width:100%;
+     min-height: 900px;
+    margin: 4% 0;
+    padding: 0 4%;
+  }
+    
+    .fx_rec_colm {
+      width: 50%;
+      padding: 20px;
+          display: flex;
+    column-gap: 30px;
+     
+    }
+  .colm_layout1,.colm_layout2{width: 50%; }
+
+.circle-img-div
+    {
+      display: flex;
+    }
+.short-txt{
+     	padding-left: 10px;
+    	font-size: 16px; 
+    }
+    .circle-img
+    {
+     	width: 55px;
+    	border-radius: 50%; 
+    }
+    .rslidesx .slick-next 
+    {
+      right: 10px;
+      padding-bottom: 110px;
+    }
+    .rslidesx .slick-prev 
+    {
+      left: 50px;
+      padding-bottom: 110px;
+	}
+    
+</style>
+<center> <h2>MAKE IT YOURS</h2> </center>
+<div class="fx_recursive_container">
+  
+    
+  <div class="fx_rec_colm">
+    <div class="colm_layout1">
+     <div class="main-img-col"> <img src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/pic1_697733c0-8a06-48ef-8008-10e6c867ec57.jpg?v=1646254322" style="width:100%"></div>
+      </div>
+    <div class="colm_layout2">
+    <h3>Uplifting Feminine Look</h3>
+    <p>Silouettes and detail to covet</p>
+    <div class="circle-img-div"> <img class="circle-img" src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/cirp1.jpg?v=1646255920" ><p class="short-txt">J.JANE </p></div>  
+                <div class="my_slideshow">
+           <ul class="rslidesx" id="fxsliderid">
+             {% for product in collections[section.settings.recursive-col1].products %}
+             <li class="slideshow-item">
+               <a href="{{ product.url }}"><img src="{{ product.featured_image | img_url: 'small' }}" alt="no image"> </a>
+               <h4>{{ product.price | money | remove: '.00' }}</h4>
+             </li>
+             {% endfor %} 
+           </ul> <!-- #slideshow-container -->   
+          </div>
+      </div>
+  </div>
+
+   <div class="fx_rec_colm" >
+    <div class="colm_layout1">
+     <div class="main-img-col"> <img src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/pic2.jpg?v=1646254322" style="width:100%"></div>
+      </div>
+    <div class="colm_layout2">
+    <h3>Body Shaping Experience</h3>
+    <p>Real deal hip up compression leggings</p>
+    <div class="circle-img-div"> <img class="circle-img" src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/cirp2.jpg?v=1646255920" ><p class="short-txt">VINA & Co. </p></div>  
+                <div class="my_slideshow">
+           <ul class="rslidesx" id="fxsliderid2">
+             {% for product in collections[section.settings.recursive-col1].products %}
+             <li class="slideshow-item">
+               <a href="{{ product.url }}"><img src="{{ product.featured_image | img_url: 'small' }}" alt="no image"> </a>
+               <h4>{{ product.price | money | remove: '.00' }}</h4>
+             </li>
+             {% endfor %} 
+           </ul> <!-- #slideshow-container -->   
+          </div>
+      </div>
+  </div>
+  
+  
+   <div class="fx_rec_colm" >
+    <div class="colm_layout1">
+     <div class="main-img-col"> <img src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/pic3.jpg?v=1646254322" style="width:100%"></div>
+      </div>
+    <div class="colm_layout2">
+    <h3>Your Next Caddie</h3>
+    <p>Make an impression on the field</p>
+    <div class="circle-img-div"> <img class="circle-img" src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/cirp3.jpg?v=1646266716" ><p class="short-txt">Stand Bag Collection </p></div>  
+                <div class="my_slideshow">
+           <ul class="rslidesx" id="fxsliderid">
+             {% for product in collections[section.settings.recursive-col1].products %}
+             <li class="slideshow-item">
+               <a href="{{ product.url }}"><img src="{{ product.featured_image | img_url: 'small' }}" alt="no image"> </a>
+               <h4>{{ product.price | money | remove: '.00' }}</h4>
+             </li>
+             {% endfor %} 
+           </ul> <!-- #slideshow-container -->   
+          </div>
+      </div>
+  </div>
+
+   <div class="fx_rec_colm" >
+    <div class="colm_layout1">
+     <div class="main-img-col"> <img src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/pic4.jpg?v=1646254322" style="width:100%"></div>
+      </div>
+    <div class="colm_layout2">
+    <h3>Wellness lifestyle sportswear</h3>
+    <p>Looks without the boundaries of sports and daily fashion</p>
+    <div class="circle-img-div"> <img class="circle-img" src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/cirp4.jpg?v=1646266716" ><p class="short-txt">Ape the Great</p></div>  
+                <div class="my_slideshow">
+           <ul class="rslidesx" id="fxsliderid2">
+             {% for product in collections[section.settings.recursive-col1].products %}
+             <li class="slideshow-item">
+               <a href="{{ product.url }}"><img src="{{ product.featured_image | img_url: 'small' }}" alt="no image"> </a>
+               <h4>{{ product.price | money | remove: '.00' }}</h4>
+             </li>
+             {% endfor %} 
+           </ul> <!-- #slideshow-container -->   
+          </div>
+      </div>
+  </div>
+  
+</div>
+ <script>
+$(document).ready(function(){
+  $('#fxsliderid,#fxsliderid2').slick({
+      centerMode: true,
+  centerPadding: '20px',
+  slidesToShow: 3,
+            autoplay: true,
+  	autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+
+      }
+    }
+  ]
+
+});
+});
+</script>
+
+{% schema %}
+  {
+    "name": "last-sec-testing",
+    "settings": [
+		{
+		"type": "collection",
+		"id": "recursive-col1",
+		
+		"label": "Choose collection to show on slider tab 1"
+		},
+		{
+		"type": "collection",
+		"id": "recursive-col2",
+		"label": "Choose collection to show on slider tab 2"
+		},
+		{
+		"type": "collection",
+		"id": "recursive-col3",
+		"label": "Choose collection to show on slider tab 3"
+		},
+		{
+		"type": "collection",
+		"id": "recursive-col4",
+		"label": "Choose collection to show on slider tab 4"
+		}
+
+],
+
+	 "presets": [
+    {
+      "name": "last-sec-testing",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}

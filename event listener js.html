@@ -1,0 +1,47 @@
+<html>
+    <head>
+
+        <title>
+            Js EventListener
+        </title>
+        <style>
+            .clkbtn{
+                background:yellow;
+                color: #000;
+                width:80px;
+                height:40px;
+            }
+            .clkbtn:hover{
+                cursor: pointer;
+                background-color: aqua;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2> Please Enter your city Name which is your favorite </h2>
+        <input type="text" id="txt" class="myinput">
+        <input type="submit" id="btn" class="clkbtn">
+        
+        <script> 
+        function grycolor(){
+            document.getElementById("txt").style.backgroundColor="grey";
+            this.style.height="40px";
+        }
+        function greenclr(){
+            document.getElementById("txt").style.backgroundColor="white";
+            this.style.height="30px";
+        }
+        function clrcoral(){
+            document.getElementById("txt").style.backgroundColor="coral";
+        }
+        function clrwhite(){
+            document.getElementById("txt").style.backgroundColor="white";
+        }
+        document.getElementById("txt").addEventListener("focus",grycolor);
+        document.getElementById("txt").addEventListener("focusout",greenclr);
+        document.getElementById("txt").addEventListener("mouseover",clrcoral);
+        document.getElementById("txt").addEventListener("mouseout", clrwhite);
+        </script>
+    </body>
+</html>
